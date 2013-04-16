@@ -8,12 +8,14 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'pry'
 gem 'active_model_serializers'
+gem 'github_api'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-rails'
+  gem 'guard-cucumber'
   gem 'fuubar'
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
