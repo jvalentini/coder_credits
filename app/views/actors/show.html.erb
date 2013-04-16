@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Actor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Login:</b>
-  <%= @actor.login %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:login) %>:</strong></dt>
+  <dd><%= @actor.login %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:avatar_url) %>:</strong></dt>
+  <dd><%= @actor.avatar_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gravatar_id) %>:</strong></dt>
+  <dd><%= @actor.gravatar_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
+  <dd><%= @actor.url %></dd>
+</dl>
 
-<p>
-  <b>Avatar url:</b>
-  <%= @actor.avatar_url %>
-</p>
-
-<p>
-  <b>Gravatar:</b>
-  <%= @actor.gravatar_id %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @actor.url %>
-</p>
-
-
-<%= link_to 'Edit', edit_actor_path(@actor) %> |
-<%= link_to 'Back', actors_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              actors_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_actor_path(@actor), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              actor_path(@actor),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
