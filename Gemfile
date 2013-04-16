@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'pry'
 gem 'active_model_serializers'
 gem 'github_api'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
