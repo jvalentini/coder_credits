@@ -11,8 +11,14 @@ gem 'active_model_serializers'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'guard-rails'
   gem 'fuubar'
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
+  gem 'growl'
 end
 
 # Gems used only for assets and not required
