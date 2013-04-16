@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @actor.login %>
+</p>
+
+<p>
+  <b>Avatar url:</b>
+  <%= @actor.avatar_url %>
+</p>
+
+<p>
+  <b>Gravatar:</b>
+  <%= @actor.gravatar_id %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @actor.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

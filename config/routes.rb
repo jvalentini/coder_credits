@@ -1,4 +1,7 @@
 CoderCredits::Application.routes.draw do
+  resources :actors
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
