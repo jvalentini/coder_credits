@@ -20,7 +20,7 @@ group :development, :test do
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
   gem 'rb-fchange', :require => false
-  gem 'growl'
+  gem 'ruby_gntp'
 end
 
 group :test do
